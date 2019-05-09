@@ -99,4 +99,15 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="93dp"
+        android:background="@drawable/button_rojo"
+        android:text="Cerrar Sesion"
+        android:textColor="@android:color/background_light" />
+
 </RelativeLayout>
