@@ -78,7 +78,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txt_cantidad"
         android:layout_width="239dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

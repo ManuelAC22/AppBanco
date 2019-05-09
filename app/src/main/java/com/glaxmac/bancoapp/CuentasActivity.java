@@ -53,14 +53,12 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
                 intent.putExtra("identidificador", cuenta);
                 intent.putExtra("dataMoney", saldo+"");
                 startActivity(intent);
-                finish();
             }break;
             case R.id.btn_retiro:{
                 Intent intent = new Intent(CuentasActivity.this, RetiroActivity.class);
                 intent.putExtra("identidificador", cuenta);
                 intent.putExtra("dataMoney", saldo+"");
                 startActivity(intent);
-                finish();
             }break;
             case R.id.btn_cerrar:{
                 Intent intent = new Intent(CuentasActivity.this, MainActivity.class);
@@ -69,4 +67,6 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
             }break;
         }
     }
+
+    public void  setSaldo(Double saldo){ this.saldo = saldo;}
 }
