@@ -55,21 +55,23 @@ public class MainActivity extends AppCompatActivity {
                     datoCantidad = 0;
                 }else{
                     datoCantidad = datoCantidad +1;
+
+                    new PromptDialog(MainActivity.this)
+                            .setDialogType(PromptDialog.DIALOG_TYPE_WRONG)
+                            .setAnimationEnable(true)
+                            .setTitleText("Error")
+                            .setContentText("Las credenciales no son correctas, por favor ingrese otra vez, Te quedan "+(3-datoCantidad)+" intentos")
+                            .setPositiveListener("OK", new PromptDialog.OnPositiveListener() {
+                                @Override
+                                public void onClick(PromptDialog dialog) {
+                                    dialog.dismiss();
+                                }
+                            }).show();
+                    contrasenaController.setText("");
+
                     if(datoCantidad == 3) {
-                        new PromptDialog(MainActivity.this)
-                                .setDialogType(PromptDialog.DIALOG_TYPE_WRONG)
-                                .setAnimationEnable(true)
-                                .setTitleText("Error")
-                                .setContentText("Las credenciales no son correctas, por favor ingrese otra vez, Te quedan "+datoCantidad+" intentos")
-                                .setPositiveListener("OK", new PromptDialog.OnPositiveListener() {
-                                    @Override
-                                    public void onClick(PromptDialog dialog) {
-                                        dialog.dismiss();
-                                    }
-                                }).show();
-                        contrasenaController.setText("");
+                        android.os.Process.killProcess(android.os.Process.myPid());
                     }
-                    Toast.makeText(MainActivity.this, datoCantidad+"", Toast.LENGTH_SHORT).show();
                 }
             }
         });
