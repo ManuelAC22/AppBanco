@@ -20,6 +20,14 @@
         <activity
             android:name=".CuentasActivity"
             android:label="@string/title_activity_cuentas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetiroActivity"
+            android:label="@string/title_activity_retiro"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DepositoActivity"
+            android:label="@string/title_activity_retiro"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

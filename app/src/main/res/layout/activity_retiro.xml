@@ -4,41 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CuentasActivity">
+    tools:context=".RetiroActivity">
 
-
-    <Button
-        android:id="@+id/btn_deposito"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="180dp"
-        android:layout_marginEnd="58dp"
-        android:background="@drawable/button_oval"
-        android:text="DEPOSITO" />
-
-    <Button
-        android:id="@+id/btn_retiro"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/btn_deposito"
-        android:layout_marginStart="68dp"
-        android:background="@drawable/button_oval"
-        android:text="RETIRO" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="24dp"
-        android:text="Mi cuenta"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="340dp"
@@ -98,5 +65,37 @@
                 android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:text="REALIZAR RETIRO"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="228dp"
+        android:ems="10"
+        android:hint="Ingrese cantidad a retirar"
+        android:inputType="textPersonName|numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_retirar"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="191dp"
+        android:background="@drawable/button"
+        android:text="Confirmar Retiro" />
 
 </RelativeLayout>
