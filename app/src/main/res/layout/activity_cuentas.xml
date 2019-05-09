@@ -100,7 +100,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_cerrar"
         android:layout_width="212dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -12,7 +12,7 @@ import java.lang.reflect.Array;
 
 public class CuentasActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button BTNRETIRO, BTNDEPOSITO;
+    Button BTNRETIRO, BTNDEPOSITO, BTNCERRAR;
     TextView LBLCUENTA, LBLSALDO;
 
     String cuenta = "";
@@ -28,6 +28,7 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
 
         BTNRETIRO = findViewById(R.id.btn_retiro);
         BTNDEPOSITO = findViewById(R.id.btn_deposito);
+        BTNCERRAR = findViewById(R.id.btn_cerrar);
 
         BTNRETIRO.setOnClickListener(this);
         BTNDEPOSITO.setOnClickListener(this);
@@ -40,7 +41,7 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
         c = cuenta2.split("-");
 
         cuenta = c[0].substring(0,3) + "-" + c[0].substring(3) + c[1]+c[2].substring(0,3) + "-" + c[2].substring(3) + "-" + c[3].substring(0,2);
-        LBLCUENTA.setText(cuenta2);
+        LBLCUENTA.setText(cuenta);
         LBLSALDO.setText("S/. "+saldo);
     }
 
@@ -50,14 +51,21 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btn_deposito:{
                 Intent intent = new Intent(CuentasActivity.this, DepositoActivity.class);
                 intent.putExtra("identidificador", cuenta);
-                intent.putExtra("dataMoney", saldo);
+                intent.putExtra("dataMoney", saldo+"");
                 startActivity(intent);
+                finish();
             }break;
             case R.id.btn_retiro:{
                 Intent intent = new Intent(CuentasActivity.this, RetiroActivity.class);
                 intent.putExtra("identidificador", cuenta);
-                intent.putExtra("dataMoney", saldo);
+                intent.putExtra("dataMoney", saldo+"");
                 startActivity(intent);
+                finish();
+            }break;
+            case R.id.btn_cerrar:{
+                Intent intent = new Intent(CuentasActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }break;
         }
     }
