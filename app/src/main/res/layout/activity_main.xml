@@ -46,78 +46,107 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/drawrable_corners">
 
-            <EditText
-                android:id="@+id/cardIdOne"
-                android:layout_width="70dp"
-                android:layout_height="36dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
-                android:background="#fff"
-                android:inputType="number"
-                android:maxLength="4" />
 
-            <EditText
-                android:id="@+id/cardIdDow"
-                android:layout_width="70dp"
-                android:layout_height="36dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/cardIdOne"
-                android:layout_marginStart="99dp"
-                android:background="#fff"
-                android:inputType="number"
-                android:maxLength="4" />
+            <LinearLayout
+                android:id="@+id/menuLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="65dp">
 
-            <EditText
-                android:id="@+id/cardIdTree"
-                android:layout_width="70dp"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/cardIdOne"
-                android:layout_marginEnd="102dp"
-                android:background="#fff"
-                android:inputType="number"
-                android:maxLength="4" />
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/cardIdOne1"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/cardIdDow2"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/cardIdTree3"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
 
 
-            <EditText
-                android:id="@+id/cardIdFour"
-                android:layout_width="70dp"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/cardIdOne"
-                android:layout_marginEnd="16dp"
-                android:background="#fff"
-                android:inputType="number"
-                android:maxLength="4" />
+                <EditText
+                    android:id="@+id/cardIdFour4"
+                    android:layout_width="70dp"
+                    android:layout_height="36dp"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:maxLength="4" />
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_alignStart="@+id/cardIdOne"
-                android:layout_marginTop="23dp"
-                android:textStyle="bold"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_marginTop="22dp"
+                android:text="BANCO EXPRESS"
                 android:textColor="#000"
-                android:text="BANCO EXPRESS" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/cardIdOne"
-                android:layout_marginBottom="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginStart="18dp"
                 android:text="Clave de Internet"
                 android:textColor="#000" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imagenMensaje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_alignTop="@+id/textView3"
-                android:layout_toEndOf="@+id/textView2"
+                android:layout_marginStart="132dp"
                 app:srcCompat="@drawable/ic_info_black_24dp" />
 
         </RelativeLayout>
@@ -126,26 +155,27 @@
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/contrasenaController"
         android:layout_width="326dp"
         android:layout_height="39dp"
         android:layout_below="@+id/menu"
         android:layout_centerHorizontal="true"
         android:background="#d4d4d4"
-        android:inputType="number"
+        android:inputType="numberPassword"
         android:layout_marginTop="15dp"
         android:maxLength="6"
         android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnIngresar"
         android:layout_width="326dp"
         android:layout_height="27dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editText2"
+        android:layout_alignStart="@+id/contrasenaController"
         android:layout_marginBottom="41dp"
         android:background="#007045"
         android:text="INGRESAR"
         android:textColor="#fff" />
+
 
 </RelativeLayout>
