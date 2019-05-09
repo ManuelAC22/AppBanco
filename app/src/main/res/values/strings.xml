@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">bancoApp</string>
+    <string name="app_name">Banco Express</string>
+    <string name="title_activity_cuentas">CuentasActivity</string>
 </resources>
