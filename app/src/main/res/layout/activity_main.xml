@@ -133,17 +133,19 @@
         android:layout_centerHorizontal="true"
         android:background="#d4d4d4"
         android:inputType="number"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:maxLength="6"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="326dp"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/editText2"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="41dp"
         android:background="#007045"
-        android:textColor="#fff"
-        android:text="INGRESAR" />
+        android:text="INGRESAR"
+        android:textColor="#fff" />
 
 </RelativeLayout>
