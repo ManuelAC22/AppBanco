@@ -1,4 +1,4 @@
-package com.glaxmac.bancoapp;
+package com.glaxmac.bancoapp.Vista;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.glaxmac.bancoapp.R;
 
 import cn.refactor.lib.colordialog.PromptDialog;
 
@@ -39,21 +40,21 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String indenti = cardIdOne1.getText()+"-"+cardIdDow2.getText()+"-"+cardIdTree3.getText()+"-"+cardIdFour4.getText();
+                String indenti = "1324-4567-7891-1234";//cardIdOne1.getText()+"-"+cardIdDow2.getText()+"-"+cardIdTree3.getText()+"-"+cardIdFour4.getText();
                 String pass = contrasenaController.getText().toString();
 
-                if((indenti.equals("1324-4567-7891-1234") && pass.equals("132456")) || (indenti.equals("9876-6541-4895-6547") && pass.equals("123459"))) {
+               // if((indenti.equals("1324-4567-7891-1234") && pass.equals("132456")) || (indenti.equals("9876-6541-4895-6547") && pass.equals("123459"))) {
                     Intent intent = new Intent(MainActivity.this, CuentasActivity.class);
                     intent.putExtra("identidificador", indenti+"");
-                    if(indenti.equals("1324-4567-7891-1234")){
+                   // if(indenti.equals("1324-4567-7891-1234")){
                         intent.putExtra("dataMoney", "100");
-                    }else if (indenti.equals("9876-6541-4895-6547")){
-                        intent.putExtra("dataMoney", "250");
-                    }
+                   // }else if (indenti.equals("9876-6541-4895-6547")){
+                       // intent.putExtra("dataMoney", "250");
+                   // }
                     startActivity(intent);
 
                     datoCantidad = 0;
-                }else{
+              /*  }else{
                     datoCantidad = datoCantidad +1;
 
                     new PromptDialog(MainActivity.this)
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     if(datoCantidad == 3) {
                         android.os.Process.killProcess(android.os.Process.myPid());
                     }
-                }
+                }*/
             }
         });
 

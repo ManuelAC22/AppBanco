@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RetiroActivity">
+    tools:context=".Vista.RetiroActivity">
 
 
     <LinearLayout
@@ -81,9 +81,9 @@
         android:id="@+id/txt_cantidad"
         android:layout_width="271dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="213dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
         android:hint="Ingrese cantidad a depositar"
         android:inputType="textPersonName|numberDecimal" />
@@ -92,9 +92,8 @@
         android:id="@+id/btn_depositar"
         android:layout_width="186dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txt_cantidad"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="113dp"
         android:background="@drawable/button"
         android:text="Confirmar Deposito" />
 
@@ -104,9 +103,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="181dp"
         android:ems="10"
         android:hint="Cuenta para deposito"
         android:inputType="number" />
+
+    <ListView
+        android:id="@+id/listadoDepositos"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:layout_below="@+id/btn_depositar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp" />
 
 </RelativeLayout>

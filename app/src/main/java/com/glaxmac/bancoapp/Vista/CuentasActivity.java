@@ -1,14 +1,13 @@
-package com.glaxmac.bancoapp;
+package com.glaxmac.bancoapp.Vista;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
+import com.glaxmac.bancoapp.R;
 
 public class CuentasActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -32,6 +31,7 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
 
         BTNRETIRO.setOnClickListener(this);
         BTNDEPOSITO.setOnClickListener(this);
+        BTNCERRAR.setOnClickListener(this);
 
         Bundle bundle = getIntent().getExtras();
         String cuenta2 = bundle.getString("identidificador");
@@ -61,8 +61,6 @@ public class CuentasActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(intent);
             }break;
             case R.id.btn_cerrar:{
-                Intent intent = new Intent(CuentasActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
             }break;
         }
